@@ -10,10 +10,9 @@ export default function App () {
   useEffect(() => {
     const getMovies = () => {
       axios
-        .get('http://localhost:5000/api/movies') // Study this endpoint with Postman
-        .then(response => {
-          // Study this response with a breakpoint or log statements
-          // and set the response data as the 'movieList' slice of state
+        .get('http://localhost:5000/api/movies')
+        .then(res => {
+          setMovieList(res.data);
         })
         .catch(error => {
           console.error('Server Error', error);
