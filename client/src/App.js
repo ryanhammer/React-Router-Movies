@@ -27,9 +27,12 @@ export default function App () {
     getMovies();
   }, []);
 
-  const addToSavedList = id => {
-    // This is stretch. Prevent the same movie from being "saved" more than once
-  };
+  // const addToSavedList = id => {
+  //   // This is stretch. Prevent the same movie from being "saved" more than once
+  //   if (saved.filter(movie => movie.id === id).length === 0) {
+  //     setSaved(movie.name);
+  //   }
+  // };
 
   return (
     <div>
